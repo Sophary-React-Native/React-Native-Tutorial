@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
-  View,
-  Button,
-  StyleSheet,
-  Alert
+  ScrollView,
+  Image,
+  Text
 } from 'react-native';
 
 export default class heighAndWidth extends Component {
@@ -13,49 +12,42 @@ export default class heighAndWidth extends Component {
   }
    render() {
      return (
-       <View style={styles.container}>
-         <View style={styles.buttonContainer}>
-           <Button
-             onPress={this._onPressButton}
-             title="Press Me"
-           />
-         </View>
-         <View style={styles.buttonContainer}>
-           <Button
-             onPress={this._onPressButton}
-             title="Press Me"
-             color="#841584"
-           />
-         </View>
-         <View style={styles.alternativeLayoutButtonContainer}>
-           <Button
-             onPress={this._onPressButton}
-             title="This looks great!"
-           />
-           <Button
-             onPress={this._onPressButton}
-             title="OK!"
-             color="#841584"
-           />
-         </View>
-       </View>
-     );
+        <ScrollView>
+          <Text style={{fontSize:96}}>Scroll me plz</Text>
+          <Image source={require('./img/images.png')} />
+          <Image source={require('./img/images.png')} />
+          <Image source={require('./img/images.png')} />
+          <Image source={require('./img/images.png')} />
+          <Image source={require('./img/images.png')} />
+          <Text style={{fontSize:96}}>If you like</Text>
+          <Image source={require('./img/images.png')} />
+          <Image source={require('./img/images.png')} />
+          <Image source={require('./img/images.png')} />
+          <Image source={require('./img/images.png')} />
+          <Image source={require('./img/images.png')} />
+          <Text style={{fontSize:96}}>Scrolling down</Text>
+          <Image source={require('./img/images.png')} />
+          <Image source={require('./img/images.png')} />
+          <Image source={require('./img/images.png')} />
+          <Image source={require('./img/images.png')} />
+          <Image source={require('./img/images.png')} />
+          <Text style={{fontSize:96}}>What is the best</Text>
+          <Image source={require('./img/images.png')} />
+          <Image source={require('./img/images.png')} />
+          <Image source={require('./img/images.png')} />
+          <Image source={require('./img/images.png')} />
+          <Image source={require('./img/images.png')} />
+          <Text style={{fontSize:96}}>Framework around?</Text>
+          <Image source={require('./img/images.png')} />
+          <Image source={require('./img/images.png')} />
+          <Image source={require('./img/images.png')} />
+          <Image source={require('./img/images.png')} />
+          <Image source={require('./img/images.png')} />
+          <Text style={{fontSize:80}}>React Native</Text>
+        </ScrollView>
+    );
   }
 }
-const styles = StyleSheet.create({
-  container: {
-   flex: 1,
-   justifyContent: 'center',
-  },
-  buttonContainer: {
-    margin: 20
-  },
-  alternativeLayoutButtonContainer: {
-    margin: 20,
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-  }
-})
 
 
 AppRegistry.registerComponent('heighAndWidth', () => heighAndWidth);
